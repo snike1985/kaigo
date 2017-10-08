@@ -1,0 +1,62 @@
+.logos {
+  padding: 20px;
+  text-align: center;
+  background-color: #00224d;
+  color: #fff;
+
+  &__title {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 2.666;
+    @include futura-bold();
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+  }
+
+  &__item {
+    padding: 10px;
+    width: calc(100%/3);
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .logos {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .logos {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .logos {
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__list {
+    }
+
+    &__item {
+      width: calc(100%/5);
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .logos {
+
+  }
+}
+

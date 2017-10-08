@@ -1,0 +1,110 @@
+.hero {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 60px);
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/hero-bg.jpg");
+  font-size: 10px;
+  color: rgb(1, 1, 1);
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 40px;
+    color: rgb(0, 34, 77);
+    line-height: 0.844;
+    @include futura-bold();
+
+    span {
+      display: block;
+      @include futura-light();
+    }
+  }
+
+  p {
+    margin-bottom: 20px;
+    line-height: 1.333;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+
+    a,
+    a:visited {
+      @include futura-bold();
+      font-size: 12px;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      text-decoration: underline;
+      line-height: 1.142;
+
+      &:hover { text-decoration: none }
+    }
+  }
+
+  &__app-btn {
+    display: block;
+    width: 130px;
+    margin: 0 20px 0 0;
+    text-decoration: none;
+    transition: opacity .3s ease-in-out;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    &:hover { opacity: .8 }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .hero {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .hero {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .hero {
+    height: 540px;
+    padding: 100px;
+    font-size: 20.212px;
+
+    &__wrap {
+      width: 50%;
+    }
+
+    &__title {
+      font-size: 80px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    &__btns {
+
+      a,
+      a:visited {
+        font-size: 14px;
+      }
+    }
+
+    &__app-btn {
+      width: 170px;
+      margin: 0 34px 0 0;
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .hero {
+
+  }
+}
+

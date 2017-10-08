@@ -1,0 +1,128 @@
+.meet {
+  background-color: #f9f8f6;
+  font-size: 12px;
+  color: rgb(145, 145, 145);
+  line-height: 1.667;
+
+  &__content {
+    padding: 20px;
+  }
+
+  &__pic {
+    height: 250px;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: rgb(1, 1, 1);
+    line-height: 1.333;
+    @include futura-bold();
+
+    img {
+      width: 100px;
+      margin: 0 0 -14px 5px;
+    }
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  &__more {
+    font-size: 14px;
+    color: rgb(7, 183, 221);
+    line-height: 2;
+    border-bottom: 1px dashed rgb(7, 183, 221);
+    @include futura-light();
+    transition: border .3s ease-in-out;
+
+    &:hover { border-bottom-color: transparent }
+  }
+
+  ul {
+
+    li {
+      position: relative;
+      padding: 0 0 10px 20px;
+
+      &:before {
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        box-sizing: border-box;
+        border: 2px solid rgb(7, 183, 221);
+        border-radius: 50%;
+        content: '';
+      }
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .meet {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .meet {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .meet {
+    display: flex;
+    min-height: 500px;
+    font-size: 20.212px;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      order: 2;
+      width: 50%;
+    }
+
+    &__pic {
+      order: 1;
+      width: 50%;
+      height: auto;
+      background-size: 400px;
+    }
+
+    &__title {
+      font-size: 36px;
+
+      img { width: 153px }
+    }
+
+    &__more {
+      font-size: 24px;
+    }
+
+    ul {
+
+      li {
+        padding: 0 0 20px 30px;
+
+        &:before {
+          top: 10px;
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .meet {
+
+  }
+}
+

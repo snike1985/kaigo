@@ -1,0 +1,32 @@
+.logo {
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+@media (min-width: $phone-landscape) {
+  .logo {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .logo {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .logo {
+    width: 53px;
+    height: 53px;
+  }
+}
+@media (min-width: $desktop) {
+  .logo {
+
+  }
+}
+

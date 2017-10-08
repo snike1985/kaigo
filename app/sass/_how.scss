@@ -1,0 +1,117 @@
+.how {
+  padding: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: rgb(0, 0, 0);
+  line-height: 1.5;
+
+  &__title {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: rgb(1, 1, 1);
+    line-height: 1.333;
+    @include futura-bold();
+  }
+
+  &__list {
+    counter-reset: list 0;
+  }
+
+  &__item {
+    overflow: hidden;
+    width: 260px;
+    margin: 0 auto 40px;
+
+    p {
+
+      &:before {
+        display: block;
+        counter-increment: list;
+        content: counter(list);
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .how {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .how {
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 20px 40px;
+    }
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .how {
+    font-size: 16px;
+
+    &__title {
+      font-size: 36px;
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .how {
+    max-width: 1010px;
+    margin: 0 auto;
+    padding: 40px 0 0;
+
+    &__item {
+      position: relative;
+      width: 25%;
+      margin: 0;
+
+      &:before {
+        position: absolute;
+        top: 6px;
+        left: 0;
+        width: 55px;
+        height: 1px;
+        background-color: #dcdcdc;
+        content: '';
+      }
+
+      &:after {
+        position: absolute;
+        top: 6px;
+        right: 0;
+        width: 55px;
+        height: 1px;
+        background-color: #dcdcdc;
+        content: '';
+      }
+
+      &:first-child:before { display: none }
+
+      &:last-child:after { display: none }
+
+      p {
+        padding: 0 20px;
+      }
+
+      img {
+        margin-bottom: -180px;
+      }
+    }
+  }
+}
+

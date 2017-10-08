@@ -1,6 +1,68 @@
 .site {
-  @include justify;
+  padding-top: 60px;
+  @include caslon-regular();
 
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    z-index: 2;
+    padding: 15px 20px;
+    background-color: #fff;
+    transition: all .3s linear;
+
+    &.fixed {
+      //box-shadow: 0 1px 4px 0 rgba(0,0,0,.5);
+
+      .menu__btn { right: 20px }
+    }
+
+    &.hide {
+      top: -60px;
+      box-shadow: none;
+    }
+  }
+
+  &__footer {
+    padding: 20px;
+    max-width: 1050px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(192, 192, 192);
+    line-height: 2.143;
+
+    .logo {
+      margin: 0 auto 20px;
+    }
+
+    &-menu {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: center;
+      margin-bottom: 10px;
+
+      a,
+      a:visited {
+        display: block;
+        margin: 0 10px;
+        color: rgb(192, 192, 192);
+        transition: color .3s ease-in-out;
+
+        &:hover { color: #000 }
+      }
+    }
+
+    &-copyright {
+
+    }
+  }
 }
 @media (min-width: $phone-landscape) {
   .site {
@@ -14,7 +76,18 @@
 }
 @media (min-width: $tablet-landscape) {
   .site {
+    padding-top: 78px;
 
+    &__header {
+      height: 78px;
+      padding: 20px calc(50% - 505px);
+
+      &.hide { top: -78px }
+    }
+
+    &__footer {
+
+    }
   }
 }
 @media (min-width: $desktop) {

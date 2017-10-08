@@ -1,38 +1,21 @@
-.btn {
-  border: none;
-  height: 50px;
-  padding: 0 10px;
-  color: $btn-color;
-  display: flex;
-  text-align: left;
-  flex-direction: row;
-  justify-content: center;
+.btn,
+a.btn {
+  display: inline-flex;
   align-items: center;
-  font-size: 14px;
-  background: $btn-back;
+  justify-content: center;
+  height: 52px;
+  min-width: 100px;
+  padding: 10px 20px;
+  background-color: #07b7dd;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  border: 2px solid #07b7dd;
+  transition: background .3s ease-in-out;
+  @include futura-demi();
 
   &:hover {
-    background: $btn-back-hover;
+    background-color: #00224d;
   }
-
-  &:active {
-    color: $btn-color-active;
-    background: $btn-back-active;
-  }
-
-  &_2 {
-    width: 150px;
-    height: 40px;
-    background: $btn-2-back;
-
-    &:hover {
-      background: $btn-2-back-hover;
-    }
-
-    &:active {
-      color: $btn-2-color-active;
-      background: $btn-2-back-active;
-    }
-  }
-
 }

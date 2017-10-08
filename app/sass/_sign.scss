@@ -1,0 +1,81 @@
+.sign {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 12px;
+  color: rgb(145, 145, 145);
+  line-height: 1.429;
+
+  &__title {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: rgb(1, 1, 1);
+    line-height: 1.333;
+    @include futura-bold();
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  &__signature {
+    padding: 10px 0;
+
+    img {
+      display: block;
+      width: 150px;
+      margin: 0 auto;
+    }
+
+    strong {
+      display: block;
+      padding-top: 10px;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: rgb(1, 1, 1);
+    }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .sign {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .sign {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .sign {
+    padding: 40px 20px;
+    font-size: 23.581px;
+
+    &__title {
+      font-size: 36px;
+    }
+
+    p {
+
+    }
+
+    &__signature {
+
+      img {
+        width: 250px;
+      }
+
+      strong {
+        font-size: 18px;
+      }
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .sign {
+
+  }
+}
+

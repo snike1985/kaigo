@@ -1,0 +1,88 @@
+.contact-us {
+  padding: 20px;
+  color: #fff;
+  background-color: #00224d;
+  text-align: center;
+
+  &__wrap {
+    max-width: 472px;
+    margin: 0 auto 20px;
+    text-align: left;
+  }
+
+  &__title {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 1;
+    @include futura-bold();
+  }
+
+  &__double {
+
+  }
+
+  &__field {
+
+    input {
+      width: 100%;
+      height: 40px;
+      padding: 0 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 6px;
+      background-color: rgb(255, 255, 255);
+      font-size: 14px;
+      color: rgb(76, 76, 76);
+      line-height: 3.064;
+      @include caslon-regular();
+    }
+  }
+
+  button[type=submit] {
+    width: 230px;
+  }
+}
+@media (min-width: $phone-landscape) {
+  .contact-us {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .contact-us {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .contact-us {
+
+    &__title {
+      font-size: 36px;
+    }
+
+    &__double {
+      display: flex;
+      justify-content: space-between;
+
+      .contact-us__field {
+        width: calc(50% - 6px);
+      }
+    }
+
+    &__field {
+
+      input {
+        height: 65px;
+        padding: 0 20px;
+        margin-bottom: 12px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .contact-us {
+
+  }
+}
+

@@ -1,0 +1,48 @@
+.phone {
+  padding: 20px;
+  background-color: #f3f9fa;
+  text-align: center;
+  text-transform: uppercase;
+  @include futura-bold();
+
+  &__title {
+    font-size: 14px;
+    color: rgb(0, 34, 77);
+    line-height: 1.125;
+  }
+
+  a,
+  a:visited {
+    font-size: 26px;
+    color: rgb(0, 34, 77);
+    line-height: 1.348;
+  }
+}
+@media (min-width: $phone-landscape) {
+  .phone {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .phone {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .phone {
+    &__title {
+      font-size: 16px;
+    }
+
+    a,
+    a:visited {
+      font-size: 36px;
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .phone {
+
+  }
+}
+

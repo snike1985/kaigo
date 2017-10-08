@@ -1,0 +1,85 @@
+.what {
+  font-size: 12px;
+  color: rgb(145, 145, 145);
+  line-height: 1.667;
+
+  &__content {
+    padding: 20px;
+  }
+
+  &__pic {
+    height: 250px;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: rgb(1, 1, 1);
+    line-height: 1.333;
+    @include futura-bold();
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  &__more {
+    font-size: 14px;
+    color: rgb(7, 183, 221);
+    line-height: 2;
+    border-bottom: 1px dashed rgb(7, 183, 221);
+    @include futura-light();
+    transition: border .3s ease-in-out;
+
+    &:hover { border-bottom-color: transparent }
+  }
+}
+@media (min-width: $phone-landscape) {
+  .what {
+
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .what {
+
+  }
+}
+@media (min-width: $tablet-landscape) {
+  .what {
+    display: flex;
+    min-height: 500px;
+    font-size: 20.212px;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 50%;
+    }
+
+    &__pic {
+      width: 50%;
+      height: auto;
+      background-size: 400px;
+    }
+
+    &__title {
+      font-size: 36px;
+    }
+
+    &__more {
+      font-size: 24px;
+    }
+  }
+}
+@media (min-width: $desktop) {
+  .what {
+
+  }
+}
+

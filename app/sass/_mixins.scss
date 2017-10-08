@@ -1,6 +1,26 @@
 //fonts
-@mixin main-font1() {
-  font-family: "myriadpro-regular", sans-serif;
+@mixin caslon-bold() {
+  font-family: "ACaslonPro-Bold", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin caslon-regular() {
+  font-family: "ACaslonPro-Regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin futura-bold() {
+  font-family: "FuturaPTBold", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin futura-demi() {
+  font-family: "FuturaPTDemi", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@mixin futura-light() {
+  font-family: "FuturaPTLight", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
