@@ -11,7 +11,7 @@
   color: rgb(1, 1, 1);
 
   &__title {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 40px;
     color: rgb(0, 34, 77);
     line-height: 0.844;
@@ -74,7 +74,7 @@
   .hero {
     height: 540px;
     padding: 100px;
-    font-size: 20.212px;
+    font-size: 18px;
 
     &__wrap {
       width: 50%;
@@ -85,7 +85,11 @@
     }
 
     p {
-      margin-bottom: 20px;
+      margin-bottom: 35px;
+      font-size: 18px;
+      padding-left: 4px;
+      line-height: 1.35;
+      max-width: 237px;
     }
 
     &__btns {
@@ -98,13 +102,14 @@
 
     &__app-btn {
       width: 170px;
-      margin: 0 34px 0 0;
+      margin: 0 36px 0 0;
     }
   }
 }
 @media (min-width: $desktop) {
   .hero {
-
+    display: block;
+    padding: 78px calc(50% - 405px);
   }
 }
 

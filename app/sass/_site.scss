@@ -1,4 +1,6 @@
 .site {
+  overflow: hidden;
+  min-width: 320px;
   padding-top: 60px;
   @include caslon-regular();
 
@@ -60,7 +62,7 @@
     }
 
     &-copyright {
-
+      text-transform: uppercase;
     }
   }
 }
@@ -86,7 +88,15 @@
     }
 
     &__footer {
+      padding: 39px;
 
+      &-menu {
+        margin-bottom: 5px;
+
+        a {
+          margin: 11px 23px 0;
+        }
+      }
     }
   }
 }

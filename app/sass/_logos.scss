@@ -5,6 +5,7 @@
   color: #fff;
 
   &__title {
+    margin-bottom: 20px;
     font-size: 14px;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
@@ -43,20 +44,27 @@
   .logos {
 
     &__title {
+      margin-bottom: 32px;
       font-size: 18px;
     }
 
     &__list {
+      margin-bottom: 47px;
     }
 
     &__item {
-      width: calc(100%/5);
+      width: 20%;
     }
   }
 }
 @media (min-width: $desktop) {
   .logos {
+    padding: 45px;
 
+    &__item {
+      width: 200px;
+      margin: 0 30px;
+    }
   }
 }
 

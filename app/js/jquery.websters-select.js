@@ -81,7 +81,15 @@
             _onEvents = function(){
                 _obj.on( 'change', function() {
                     _text.text( $( this ).find( 'option:selected' ).text() );
+
                 } );
+                $(document).on(
+                    "change",
+                    "select",
+                    function() {
+                        $( this).prev().text( $( this ).find( 'option:selected' ).text() );
+                    }
+                );
 
                 if( _optionType == 1 && !_device ){
                     _wrap.on( {
@@ -96,15 +104,15 @@
 
                         }
                     } );
-
-                    _window.on( {
-                        'click': function(){
-                            if( _opened ){
-                                _hidePopup();
-                            }
-                        }
-                    } );
                 }
+                _body.on( {
+                    'click': function(){
+                        if( _opened ){
+                            _hidePopup();
+                        }
+                    }
+                } );
+
             },
             _selectViewType = function(){
 
@@ -154,21 +162,19 @@
                 } );
 
                 _popup.append( list );
-                _body.append( _popup );
+                _wrap.append( _popup );
                 _wrap.addClass( 'websters-select_opened' );
 
                 _popup.css( {
                     width: _wrap.outerWidth(),
-                    left: offset.left,
-                    top: offset.top + _wrap.outerHeight()
+                    left: -2,
+                    top: _wrap.outerHeight() - 4
                 } );
 
                 maxHeight = _popup.outerHeight();
                 if( maxHeight > _popup.find( 'li' ).eq( 0 ).outerHeight() * _visible ){
                     _popup.height( _popup.find( 'li' ).eq( 0 ).outerHeight() * _visible );
-                    _scroll = _popup.niceScroll( {
-                        horizrailenabled: false
-                    } );
+                    _scroll = _popup.perfectScrollbar();
                 }
 
                 if( _showType == 1 ){
@@ -204,7 +210,7 @@
             return _opened;
         };
         _self.close = function(){
-          _hidePopup();
+            _hidePopup();
         };
 
 

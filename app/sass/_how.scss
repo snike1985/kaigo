@@ -71,9 +71,13 @@
 }
 @media (min-width: $desktop) {
   .how {
-    max-width: 1010px;
+    max-width: 1038px;
     margin: 0 auto;
-    padding: 40px 0 0;
+    padding: 70px 0 0;
+
+    &__title {
+      margin-bottom: 51px;
+    }
 
     &__item {
       position: relative;
@@ -82,7 +86,7 @@
 
       &:before {
         position: absolute;
-        top: 6px;
+        top: 11px;
         left: 0;
         width: 55px;
         height: 1px;
@@ -92,7 +96,7 @@
 
       &:after {
         position: absolute;
-        top: 6px;
+        top: 11px;
         right: 0;
         width: 55px;
         height: 1px;
@@ -105,11 +109,15 @@
       &:last-child:after { display: none }
 
       p {
-        padding: 0 20px;
+        padding: 0 32px;
+
+        &:before {
+          margin-bottom: 27px;
+        }
       }
 
       img {
-        margin-bottom: -180px;
+        margin: -6px 0 -174px;
       }
     }
   }

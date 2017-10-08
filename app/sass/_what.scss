@@ -51,8 +51,8 @@
 @media (min-width: $tablet-landscape) {
   .what {
     display: flex;
-    min-height: 500px;
-    font-size: 20.212px;
+    min-height: 493px;
+    font-size: 18px;
 
     &__content {
       display: flex;
@@ -79,7 +79,24 @@
 }
 @media (min-width: $desktop) {
   .what {
+    padding: 7px calc(50% - 524px) 0;
 
+    &__pic {
+      background-size: 376px;
+    }
+
+    &__content {
+      display: block;
+      padding: 54px 10px 0 120px;
+    }
+
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    p {
+      margin-bottom: 29px;
+    }
   }
 }
 
