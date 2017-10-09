@@ -58,7 +58,30 @@
 }
 @media (min-width: $tablet-landscape) {
   .contact-us {
+    position: relative;
     padding: 73px 20px;
+
+    &:before {
+      @include absoluteCenterY();
+      left: 0;
+      width: 228px;
+      height: 415px;
+      background-image: url("../img/left-cubs.png");
+      background-repeat: no-repeat;
+      pointer-events: none;
+      content: '';
+    }
+
+    &:after {
+      @include absoluteCenterY();
+      right: 0;
+      width: 274px;
+      height: 415px;
+      background-image: url("../img/right-cubs.png");
+      background-repeat: no-repeat;
+      pointer-events: none;
+      content: '';
+    }
 
     &__title {
       margin-bottom: 34px;
