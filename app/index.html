@@ -380,14 +380,15 @@
             <!-- contact-us__field -->
             <div class="contact-us__field">
                 <select>
-                    <option value="0">Basic Plan (Free)</option>
-                    <option value="1">Basic Plan 1</option>
-                    <option value="2">Basic Plan 2</option>
-                    <option value="3">Basic Plan 3</option>
-                    <option value="4">Basic Plan 4</option>
-                    <option value="5">Basic Plan 5</option>
-                    <option value="6">Basic Plan 6</option>
+                    <option value="Basic Plan (Free)">Basic Plan (Free)</option>
+                    <option value="Basic Plan 1">Basic Plan 1</option>
+                    <option value="Basic Plan 2">Basic Plan 2</option>
+                    <option value="Basic Plan 3">Basic Plan 3</option>
+                    <option value="Basic Plan 4">Basic Plan 4</option>
+                    <option value="Basic Plan 5">Basic Plan 5</option>
+                    <option value="Basic Plan 6">Basic Plan 6</option>
                 </select>
+                <input class="contact-us__plan" type="hidden" name="plan">
             </div>
             <!-- /contact-us__field -->
 
@@ -395,12 +396,12 @@
             <div class="contact-us__double">
                 <!-- contact-us__field -->
                 <div class="contact-us__field">
-                    <input type="text" name="firstName" placeholder="First name">
+                    <input type="text" name="firstName" placeholder="First name" required>
                 </div>
                 <!-- /contact-us__field -->
                 <!-- contact-us__field -->
                 <div class="contact-us__field">
-                    <input type="text" name="lastName" placeholder="Last name">
+                    <input type="text" name="lastName" placeholder="Last name" required>
                 </div>
                 <!-- /contact-us__field -->
             </div>
@@ -410,12 +411,12 @@
             <div class="contact-us__double">
                 <!-- contact-us__field -->
                 <div class="contact-us__field">
-                    <input type="email" name="email" placeholder="E-mail">
+                    <input type="email" name="email" placeholder="E-mail" required>
                 </div>
                 <!-- /contact-us__field -->
                 <!-- contact-us__field -->
                 <div class="contact-us__field">
-                    <input type="password" name="password" placeholder="Create password">
+                    <input type="password" name="password" placeholder="Create password" required>
                 </div>
                 <!-- /contact-us__field -->
             </div>
@@ -423,7 +424,7 @@
 
             <!-- contact-us__field -->
             <div class="contact-us__field">
-                <input type="tel" name="phone" placeholder="Phone number">
+                <input type="tel" name="phone" placeholder="Phone number" required>
             </div>
             <!-- /contact-us__field -->
         </div>

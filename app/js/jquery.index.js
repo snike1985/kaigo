@@ -18,6 +18,10 @@
             new Site( $(this) );
         } );
 
+        $('.contact-us').each( function() {
+            new SendForm( $(this) );
+        } );
+
     });
 
     var Testimonials = function ( obj ) {
@@ -104,24 +108,24 @@
 
                 _item.on({
                     'click': function() {
-                        event.preventDefault();
-                        var elem = $( this ),
-                            id = elem.attr( 'href' ),
-                            way = $( id ).offset().top - $( '.site__header' ).outerHeight() + 1,
-                            duration = 1000,
-                            scrollWrap = $( 'body, html' );
-
-                        if ( !elem.hasClass( 'active' ) ) {
-                            scrollWrap.animate( { scrollTop: way }, duration );
-
-                            setTimeout( function () {
-                                scrollWrap.animate( { scrollTop: way - 1 }, 1 );
-                            }, duration );
-
-                            _item.removeClass( 'active' );
-                            elem.addClass( 'active' );
-                            _hideMenu();
-                        }
+                        // event.preventDefault();
+                        // var elem = $( this ),
+                        //     id = elem.attr( 'href' ),
+                        //     way = $( id ).offset().top - $( '.site__header' ).outerHeight() + 1,
+                        //     duration = 1000,
+                        //     scrollWrap = $( 'body, html' );
+                        //
+                        // if ( !elem.hasClass( 'active' ) ) {
+                        //     scrollWrap.animate( { scrollTop: way }, duration );
+                        //
+                        //     setTimeout( function () {
+                        //         scrollWrap.animate( { scrollTop: way - 1 }, 1 );
+                        //     }, duration );
+                        //
+                        //     _item.removeClass( 'active' );
+                        //     elem.addClass( 'active' );
+                        //     _hideMenu();
+                        // }
 
                     }
                 });
@@ -238,6 +242,75 @@
 
         //public methods
 
+        _init();
+    };
+
+    var SendForm = function( obj ){
+        //private properties
+        var _obj = obj,
+            _self = this,
+            _plan = _obj.find('select'),
+            _planData = _obj.find('.contact-us__plan');
+        //private methods
+        var _init = function(){
+                _obj[ 0 ].obj = _self;
+                _onEvent();
+                _planData.val(_plan.val());
+            },
+            _onEvent = function(){
+
+                _obj.on({
+                    'submit': function () {
+                        var data = $(this).serializeArray();
+
+                        _ajaxSend(data);
+
+                        return false;
+                    }
+                });
+
+                _plan.on({
+                    'change': function () {
+                        var data = $(this).val();
+
+                        _planData.val(data);
+
+                        return false;
+                    }
+                });
+
+            },
+            _ajaxSend = function(data){
+                $.ajax( {
+                    url: 'php/sender.php',
+                    dataType: 'html',
+                    timeout: 20000,
+                    type: "POST",
+                    data: {
+                        plan: data[0]['value'],
+                        firstName: data[1]['value'],
+                        lastName: data[2]['value'],
+                        email: data[3]['value'],
+                        password: data[4]['value'],
+                        phone: data[5]['value']
+                    },
+                    success: function (e) {
+                        console.log(e);
+                        alert('Thank you!');
+                    },
+                    error: function (XMLHttpRequest) {
+                        if (XMLHttpRequest.statusText != 'abort') {
+                            alert(XMLHttpRequest.statusText);
+                        }
+                    }
+                } );
+                return false;
+            };
+        //public properties
+        //public methods
+        _self.send = function () {
+            _ajaxSend();
+        };
         _init();
     };
 
