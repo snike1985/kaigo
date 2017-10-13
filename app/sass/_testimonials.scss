@@ -17,7 +17,7 @@
 
   &__slider {
     position: relative;
-    max-width: 770px;
+    //max-width: 770px;
     margin: 0 auto;
     z-index: 1;
 
@@ -106,6 +106,14 @@
 
       .swiper-slide {
         padding: 52px 140px 117px;
+      }
+
+      .swiper-button-prev {
+        left: 25%;
+      }
+
+      .swiper-button-next {
+        right: 25%;
       }
     }
   }

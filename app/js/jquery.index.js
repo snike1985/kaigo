@@ -47,7 +47,14 @@
                     nextButton: _next,
                     prevButton: _prev,
                     loop: true,
-                    spaceBetween: 30
+                    slidesPerView: 2,
+                    centeredSlides: true,
+                    spaceBetween: 30,
+                    breakpoints: {
+                        992: {
+                            slidesPerView: 1
+                        }
+                    }
                 });
             },
             _construct = function() {
