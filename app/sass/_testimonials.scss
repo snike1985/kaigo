@@ -71,8 +71,10 @@
       border-radius: 50%;
 
       img {
-        @include absoluteCenter();
+        @include absoluteCenterX();
+        top: 0;
         width: 100%;
+        min-height: 100%;
       }
     }
 
