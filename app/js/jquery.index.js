@@ -117,17 +117,13 @@
                             duration = 1000,
                             scrollWrap = $( 'body, html' );
 
-                        if ( !elem.hasClass( 'active' ) ) {
-                            scrollWrap.animate( { scrollTop: way }, duration );
+                        scrollWrap.animate( { scrollTop: way }, duration );
 
-                            setTimeout( function () {
-                                scrollWrap.animate( { scrollTop: way - 1 }, 1 );
-                            }, duration );
+                        setTimeout( function () {
+                            scrollWrap.animate( { scrollTop: way - 1 }, 1 );
+                        }, duration );
 
-                            _item.removeClass( 'active' );
-                            elem.addClass( 'active' );
-                            _hideMenu();
-                        }
+                        _hideMenu();
 
                     }
                 });
